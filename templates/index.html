@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataLens AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="hero">
+
+    <div class="card">
+
+        <h1>📊 DataLens AI</h1>
+
+        <h3>Intelligent Data Analysis Platform</h3>
+
+        <p>
+            Upload your CSV dataset and instantly generate
+            professional visualizations, AI-powered insights,
+            and detailed analytics reports.
+        </p>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+
+            <input type="file" name="file" accept=".csv" required>
+
+            <button type="submit">
+                🚀 Analyze Dataset
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

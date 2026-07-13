@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Charts - DataLens AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <h1>📈 Generated Charts</h1>
+
+    <div class="dashboard-header">
+
+        <p><strong>Dataset:</strong> {{ filename }}</p>
+
+        <p>Total Charts: {{ charts|length }}</p>
+
+    </div>
+
+    <div class="chart-grid">
+
+        {% for chart in charts %}
+
+        <div class="chart-card">
+
+            <img src="{{ url_for('static', filename='charts/' + chart) }}"
+                 alt="{{ chart }}"
+                 class="chart-image"
+                 onclick="openModal(this.src)">
+
+            <p>{{ chart.replace('.png','').replace('_',' ').title() }}</p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    <!-- Image Modal -->
+
+    <div id="imageModal" class="modal">
+
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <img class="modal-content" id="modalImage">
+
+    </div>
+
+    <div class="download-box">
+
+        <a href="{{ url_for('menu') }}" class="download-btn">
+
+            ⬅ Back to Analysis Menu
+
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+
+function openModal(imageSrc){
+
+    document.getElementById("imageModal").style.display = "block";
+
+    document.getElementById("modalImage").src = imageSrc;
+
+}
+
+function closeModal(){
+
+    document.getElementById("imageModal").style.display = "none";
+
+}
+
+window.onclick = function(event){
+
+    let modal = document.getElementById("imageModal");
+
+    if(event.target == modal){
+
+        modal.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>

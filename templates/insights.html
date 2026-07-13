@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>AI Insights</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <h1>🤖 AI Insights</h1>
+
+    <div class="dashboard-header">
+
+        <p><strong>Dataset:</strong> {{ filename }}</p>
+
+        <p>AI Generated Dataset Analysis</p>
+
+    </div>
+
+    <div class="insight-box">
+
+        <ul>
+
+            {% for insight in insights %}
+
+            <li>{{ insight }}</li>
+
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+    <div class="download-box">
+
+        <a href="{{ url_for('menu') }}" class="download-btn">
+
+            ⬅ Back to Analysis Menu
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

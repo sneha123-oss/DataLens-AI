@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DataLens AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <h1>📊 DataLens AI</h1>
+
+    <div class="dashboard-header">
+
+        <p>✅ Analysis Completed Successfully</p>
+
+        <p>Select what you would like to explore.</p>
+
+    </div>
+
+    <div class="menu-grid">
+
+        <a href="{{ url_for('preview') }}" class="menu-card">
+
+            <div class="icon">📋</div>
+
+            <h2>Dataset Preview</h2>
+
+            <p>View summary, columns and dataset preview.</p>
+
+        </a>
+
+        <a href="{{ url_for('charts') }}" class="menu-card">
+
+            <div class="icon">📈</div>
+
+            <h2>Charts</h2>
+
+            <p>View generated visualizations.</p>
+
+        </a>
+
+        <a href="{{ url_for('insights') }}" class="menu-card">
+
+            <div class="icon">🤖</div>
+
+            <h2>AI Insights</h2>
+
+            <p>Understand the dataset using simple insights.</p>
+
+        </a>
+
+        <a href="{{ url_for('download_report') }}" class="menu-card">
+
+            <div class="icon">📄</div>
+
+            <h2>Download PDF</h2>
+
+            <p>Download the analysis report.</p>
+
+        </a>
+
+    </div>
+
+    <div class="download-box">
+
+        <a href="{{ url_for('home') }}" class="download-btn">
+
+            ⬅ Analyze Another Dataset
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

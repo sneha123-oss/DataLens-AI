@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Dataset Preview</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <h1>📋 Dataset Preview</h1>
+
+    <div class="dashboard-header">
+
+        <p><strong>Dataset:</strong> {{ filename }}</p>
+
+        <p>Summary of uploaded dataset</p>
+
+    </div>
+
+    <!-- Summary Cards -->
+
+    <div class="cards">
+
+        <div class="card-box">
+            <h2>{{ rows }}</h2>
+            <p>Rows</p>
+        </div>
+
+        <div class="card-box">
+            <h2>{{ cols }}</h2>
+            <p>Columns</p>
+        </div>
+
+        <div class="card-box">
+            <h2>{{ missing }}</h2>
+            <p>Missing Values</p>
+        </div>
+
+        <div class="card-box">
+            <h2>{{ duplicates }}</h2>
+            <p>Duplicates</p>
+        </div>
+
+    </div>
+
+    <!-- Columns -->
+
+    <div class="section">
+
+        <h2>Dataset Columns</h2>
+
+        <ul>
+
+        {% for column in columns %}
+
+            <li>{{ column }}</li>
+
+        {% endfor %}
+
+        </ul>
+
+    </div>
+
+    <!-- Preview -->
+
+    <div class="section">
+
+        <h2>First 10 Rows</h2>
+
+        {{ preview|safe }}
+
+    </div>
+
+    <div class="download-box">
+
+       <a href="{{ url_for('menu') }}" class="download-btn">
+
+            ⬅ Upload Another Dataset
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

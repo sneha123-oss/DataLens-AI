@@ -1,0 +1,726 @@
+/* ===========================
+   GENERAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#1E3C72,#2A5298);
+    min-height:100vh;
+}
+
+/* ===========================
+   LANDING PAGE
+=========================== */
+
+/* ===========================
+   LANDING PAGE
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+.card{
+
+    width:650px;
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+}
+
+.card h1{
+
+    color:#2A5298;
+
+    font-size:54px;
+
+    margin-bottom:10px;
+
+}
+
+.card h3{
+
+    color:#444;
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+.card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+    font-size:18px;
+
+}
+
+input[type=file]{
+
+    width:100%;
+
+    padding:14px;
+
+    border:2px solid #ddd;
+
+    border-radius:10px;
+
+    margin-bottom:25px;
+
+    cursor:pointer;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    background:#2A5298;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#1E3C72;
+
+}
+
+/* ===========================
+   DASHBOARD
+=========================== */
+
+.dashboard-container{
+
+    width:95%;
+
+    max-width:1500px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+}
+
+.dashboard-container h1{
+
+    text-align:center;
+
+    color:#2A5298;
+
+    margin-bottom:40px;
+
+    font-size:42px;
+
+}
+
+/* ===========================
+   SUMMARY CARDS
+=========================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-bottom:40px;
+
+}
+
+.card-box{
+
+    background:white;
+
+    color:#2A5298;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.card-box:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.card-box h2{
+
+    font-size:48px;
+
+    margin-bottom:10px;
+
+}
+
+.card-box p{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+.section{
+
+    margin-top:45px;
+
+}
+
+.section h2{
+
+    color:#2A5298;
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+}
+
+/* ===========================
+   COLUMN LIST
+=========================== */
+
+.section ul{
+
+    columns:2;
+
+    padding-left:20px;
+
+}
+
+.section li{
+
+    margin-bottom:10px;
+
+    font-size:17px;
+
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+.table th{
+
+    background:#2A5298;
+
+    color:white;
+
+    padding:14px;
+
+}
+
+.table td{
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+}
+
+.table tr:nth-child(even){
+
+    background:#f7f7f7;
+
+}
+
+.table tr:hover{
+
+    background:#eef4ff;
+
+}
+
+/* ===========================
+   CHARTS
+=========================== */
+
+.chart-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:25px;
+
+}
+
+.chart-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.chart-card:hover{
+
+    transform:scale(1.03);
+
+}
+
+.chart-card img{
+
+    width:100%;
+
+    border-radius:10px;
+
+}
+
+.chart-card p{
+
+    margin-top:15px;
+
+    text-align:center;
+
+    color:#2A5298;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   AI ANALYSIS
+=========================== */
+
+.insight-box{
+
+    background:white;
+
+    border-left:6px solid #2A5298;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.15);
+
+}
+
+.insight-box ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.insight-box li{
+
+    background:#f8fbff;
+
+    margin-bottom:15px;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+.insight-box li:last-child{
+
+    margin-bottom:0;
+
+}
+
+/* ===========================
+   DATASET HEALTH
+=========================== */
+
+.health-card{
+
+    background:linear-gradient(135deg,#2A5298,#4F7FD6);
+
+    color:white;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    margin-top:20px;
+
+}
+
+.health-card h1{
+
+    font-size:60px;
+
+}
+
+.health-card h3{
+
+    margin-top:10px;
+
+    font-size:28px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.section ul{
+
+columns:1;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.card{
+
+width:90%;
+
+padding:30px;
+
+}
+
+.dashboard-container{
+
+padding:20px;
+
+}
+
+.dashboard-container h1{
+
+font-size:32px;
+
+}
+
+}
+.dashboard-header{
+
+    background:#eef4ff;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    margin-bottom:30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+.dashboard-header p{
+
+    font-size:18px;
+
+    color:#2A5298;
+
+    font-weight:bold;
+
+}
+/* ===========================
+   DOWNLOAD REPORT
+=========================== */
+
+.download-box{
+
+    text-align:center;
+
+    margin-top:25px;
+
+}
+
+.download-btn{
+
+    display:inline-block;
+
+    background:#2A5298;
+
+    color:white;
+
+    padding:16px 35px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+}
+
+.download-btn:hover{
+
+    background:#1E3C72;
+
+    transform:translateY(-3px);
+
+}
+/* ===========================
+   DASHBOARD NAVIGATION
+=========================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+.dashboard-nav{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin:35px 0;
+
+}
+
+.dashboard-nav a{
+
+    background:#2A5298;
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 28px;
+
+    border-radius:12px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    transition:0.3s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+.dashboard-nav a:hover{
+
+    background:#1E3C72;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,0.2);
+
+}
+
+.dashboard-nav a:active{
+
+    transform:scale(0.97);
+}
+/* ===========================
+   MENU PAGE
+=========================== */
+
+.menu-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+.menu-card{
+
+    background:white;
+
+    text-decoration:none;
+
+    color:#333;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.menu-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.2);
+
+}
+
+.menu-card .icon{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+.menu-card h2{
+
+    color:#2A5298;
+
+    margin-bottom:15px;
+
+}
+
+.menu-card p{
+
+    color:#666;
+
+    line-height:1.6;
+
+}
+/* ===========================
+   CHART IMAGE MODAL
+=========================== */
+
+.chart-image{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.chart-image:hover{
+    transform:scale(1.03);
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:1000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+}
+
+.modal-content{
+    display:block;
+    margin:40px auto;
+    max-width:90%;
+    max-height:85%;
+    border-radius:12px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:40px;
+    color:white;
+    font-size:50px;
+    font-weight:bold;
+    cursor:pointer;
+}
