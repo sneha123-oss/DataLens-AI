@@ -1,0 +1,21 @@
+﻿# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+
+# Environment Variables
+.env
+
+# Uploaded Files
+uploads/*
+!uploads/.gitkeep
+
+# Reports
+reports/*
+!reports/.gitkeep
+
+# Charts
+static/charts/*
+!static/charts/.gitkeep
