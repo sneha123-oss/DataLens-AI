@@ -170,51 +170,73 @@ button:hover{
 
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
 
-    gap:20px;
+    gap:30px;
 
-    margin-bottom:40px;
+    margin-top:40px;
 
 }
-
 .card-box{
 
     background:white;
 
-    color:#2A5298;
+    border-radius:20px;
 
-    border-radius:18px;
-
-    padding:30px;
+    padding:35px 25px;
 
     text-align:center;
+
+    text-decoration:none;
+
+    color:#2A5298;
 
     box-shadow:0 10px 25px rgba(0,0,0,.15);
 
     transition:.3s;
 
+    min-height:280px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
 }
 
 .card-box:hover{
 
-    transform:translateY(-6px);
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
 
 }
-
 .card-box h2{
 
-    font-size:48px;
+    margin-top:20px;
 
-    margin-bottom:10px;
+    margin-bottom:15px;
+
+    font-size:34px;
+
+    color:#2A5298;
+
+    text-decoration:none;
 
 }
 
 .card-box p{
 
-    font-size:20px;
+    font-size:19px;
 
-    font-weight:bold;
+    line-height:1.6;
+
+    color:#555;
+
+    text-decoration:none;
 
 }
 
@@ -723,4 +745,26 @@ html{
     font-size:50px;
     font-weight:bold;
     cursor:pointer;
+}
+/* ===========================
+   MENU CARD FIX
+=========================== */
+
+.card-box,
+.card-box:hover,
+.card-box:visited,
+.card-box:active{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.card-icon{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
 }

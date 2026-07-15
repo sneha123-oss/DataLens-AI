@@ -4,7 +4,6 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>DataLens AI</title>
@@ -28,45 +27,80 @@
 
     </div>
 
-    <div class="menu-grid">
+    <div class="cards">
 
-        <a href="{{ url_for('preview') }}" class="menu-card">
+        <!-- Dataset Preview -->
 
-            <div class="icon">📋</div>
+        <a href="{{ url_for('preview') }}" class="card-box">
 
+            <div class="card-icon">📋</div>
             <h2>Dataset Preview</h2>
 
-            <p>View summary, columns and dataset preview.</p>
+            <p>
+                View summary, columns and
+                dataset preview.
+            </p>
 
         </a>
 
-        <a href="{{ url_for('charts') }}" class="menu-card">
+        <!-- Charts -->
 
-            <div class="icon">📈</div>
+        <a href="{{ url_for('charts') }}" class="card-box">
+
+            <div class="card-icon">📋</div>
 
             <h2>Charts</h2>
 
-            <p>View generated visualizations.</p>
+            <p>
+                View generated
+                visualizations.
+            </p>
 
         </a>
 
-        <a href="{{ url_for('insights') }}" class="menu-card">
+        <!-- AI Insights -->
 
-            <div class="icon">🤖</div>
+        <a href="{{ url_for('insights') }}" class="card-box">
+
+           <div class="card-icon">📋</div>
 
             <h2>AI Insights</h2>
 
-            <p>Understand the dataset using simple insights.</p>
+            <p>
+                Understand the dataset
+                using AI insights.
+            </p>
 
         </a>
 
-        <a href="{{ url_for('download_report') }}" class="menu-card">
+        <!-- Download PDF -->
 
-            <div class="icon">📄</div>
+        <a href="{{ url_for('download_report') }}" class="card-box">
+
+           <div class="card-icon">📋</div>
 
             <h2>Download PDF</h2>
 
-            <p>Download the analysis report.</p>
+            <p>
+                Download the
+                analysis report.
+            </p>
+
+        </a>
+
+        <!-- NEW FEATURE -->
+
+        <a href="{{ url_for('prepare') }}" class="card-box">
+
+          <div class="card-icon">📋</div>
+
+            <h2>AI Dataset Preparation</h2>
+
+            <p>
+                Automatically prepare your dataset
+                for Machine Learning and download
+                the processed dataset.
+            </p>
 
         </a>
 
@@ -74,7 +108,8 @@
 
     <div class="download-box">
 
-        <a href="{{ url_for('home') }}" class="download-btn">
+        <a href="{{ url_for('home') }}"
+           class="download-btn">
 
             ⬅ Analyze Another Dataset
 

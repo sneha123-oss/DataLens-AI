@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>AI Dataset Preparation</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <h1>✨ AI Dataset Preparation</h1>
+
+    <div class="dashboard-header">
+
+        <p><strong>Dataset:</strong> {{ filename }}</p>
+
+        <p>Preparing Dataset for Machine Learning</p>
+
+    </div>
+    <div class="section">
+
+    <h2>📊 Before vs After Comparison</h2>
+
+    <table class="table">
+
+        <tr>
+            <th>Metric</th>
+            <th>Original</th>
+            <th>Prepared</th>
+        </tr>
+
+        <tr>
+            <td><b>Rows</b></td>
+            <td>{{ rows }}</td>
+            <td>{{ clean_rows }}</td>
+        </tr>
+
+        <tr>
+            <td><b>Columns</b></td>
+            <td>{{ cols }}</td>
+            <td>{{ clean_cols }}</td>
+        </tr>
+
+        <tr>
+            <td><b>Missing Values</b></td>
+            <td>{{ missing }}</td>
+            <td>{{ clean_missing }}</td>
+        </tr>
+
+        <tr>
+            <td><b>Duplicate Rows</b></td>
+            <td>{{ duplicates }}</td>
+            <td>{{ clean_duplicates }}</td>
+        </tr>
+
+    </table>
+
+</div>
+<div class="section">
+
+    <h2>⭐ Dataset Quality Score</h2>
+
+    <table class="table">
+
+        <tr>
+            <th>Dataset</th>
+            <th>Quality Score</th>
+        </tr>
+
+        <tr>
+            <td>Original Dataset</td>
+            <td>{{ original_score }}%</td>
+        </tr>
+
+        <tr>
+            <td>Prepared Dataset</td>
+            <td>{{ clean_score }}%</td>
+        </tr>
+
+    </table>
+
+</div>
+
+ 
+
+    <!-- PREPARATION SUMMARY -->
+
+    <div class="section">
+
+        <h2>🤖 AI Preparation Summary</h2>
+
+        <div class="insight-box">
+
+            <ul>
+
+                {% for item in summary %}
+
+                    <li>{{ item }}</li>
+
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="health-card">
+
+        <h1>🟢</h1>
+
+        <h3>Machine Learning Ready</h3>
+
+    </div>
+
+    <div class="download-box">
+
+        <a href="{{ url_for('download_cleaned_dataset') }}"
+           class="download-btn">
+
+            ⬇ Download Cleaned Dataset
+
+        </a>
+
+        <br><br>
+
+        <a href="{{ url_for('menu') }}"
+           class="download-btn">
+
+            ⬅ Back to Menu
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
