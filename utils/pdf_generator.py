@@ -44,7 +44,7 @@ def create_pdf(
     # Title
     # ----------------------------
 
-    story.append(Paragraph("📊 DataLens AI", title_style))
+    story.append(Paragraph("DataLens AI", title_style))
     story.append(Paragraph("Dataset Analysis Report", heading_style))
     story.append(Spacer(1, 0.3 * inch))
 
@@ -104,7 +104,7 @@ def create_pdf(
     story.append(Spacer(1, 0.1 * inch))
 
     for insight in insights:
-        story.append(Paragraph(f"✓ {insight}", normal))
+        story.append(Paragraph(f"{insight}", normal))
         story.append(Spacer(1, 0.05 * inch))
 
     story.append(Spacer(1, 0.2 * inch))
